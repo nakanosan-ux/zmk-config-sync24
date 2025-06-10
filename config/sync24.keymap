@@ -33,6 +33,15 @@
         };
     };
 
+    macros {
+        word_math: word_math {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp INT_MUHENKAN>;
+            label = "WORD_MATH";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -41,10 +50,10 @@
         base {
             display-name = "Base";
             bindings = <
-&kp LANG_ZENKAKUHANKAKU  &kp Q         &kp W     &kp E             &kp R     &kp T            &kp Y      &kp U      &kp I      &kp O           &kp P           &kp BACKSPACE
-&kp TAB                  &kp A         &kp S     &kp D             &kp F     &kp G            &kp H      &kp J      &kp K      &kp L           &kp SEMICOLON   &kp RET
-&kp LSHFT                &kp Z         &kp X     &kp C             &kp V     &kp B            &kp N      &kp M      &kp COMMA  &kp DOT         &kp UP          &kp RSHIFT
-&kp LEFT_CONTROL         &kp LEFT_WIN  &kp LALT  &kp INT_MUHENKAN  &kp BSPC  &lt 1 SPACE      &lt 2 RET  &kp ENTER  &kp RCMD   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT
+&kp LANG_ZENKAKUHANKAKU  &kp Q         &kp W     &kp E             &kp R     &kp T            &kp Y      &kp U      &kp I                         &kp O           &kp P           &kp BACKSPACE
+&kp TAB                  &kp A         &kp S     &kp D             &kp F     &kp G            &kp H      &kp J      &kp K                         &kp L           &kp SEMICOLON   &kp RET
+&kp LSHFT                &kp Z         &kp X     &kp C             &kp V     &kp B            &kp N      &kp M      &kp COMMA                     &kp DOT         &kp UP          &kp RSHIFT
+&kp LEFT_CONTROL         &kp LEFT_WIN  &kp LALT  &kp INT_MUHENKAN  &kp BSPC  &lt 1 SPACE      &lt 2 RET  &kp ENTER  &mt RIGHT_CONTROL INT_HENKAN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT
             >;
         };
 
