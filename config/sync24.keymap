@@ -48,6 +48,20 @@
             timeout-ms = <50>;
             layers = <0>;
         };
+
+        PC_tenkey {
+            bindings = <&tog 1>;
+            key-positions = <9 8 7>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        iPad_tenkey {
+            bindings = <&tog 4>;
+            key-positions = <9 8 7>;
+            timeout-ms = <50>;
+            layers = <3>;
+        };
     };
 
     macros {
