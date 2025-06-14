@@ -40,6 +40,13 @@
             bindings = <&kp INT_MUHENKAN>;
             label = "WORD_MATH";
         };
+
+        bt_01_iPad: bt_01_iPad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &to 4>;
+            label = "BT_01_IPAD";
+        };
     };
 
     keymap {
