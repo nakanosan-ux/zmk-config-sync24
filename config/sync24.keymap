@@ -32,7 +32,6 @@
             timeout-ms = <50>;
             key-positions = <36 37>;
             bindings = <&mo 5>;
-            layers = <3 0>;
         };
 
         back_to_0 {
@@ -53,14 +52,14 @@
             bindings = <&tog 1>;
             key-positions = <9 8 7>;
             timeout-ms = <50>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         iPad_tenkey {
             bindings = <&tog 4>;
             key-positions = <9 8 7>;
             timeout-ms = <50>;
-            layers = <3>;
+            layers = <3 4>;
         };
     };
 
@@ -146,7 +145,7 @@
             display-name = "Util";
             bindings = <
 &bt_00_PC       &bt_01_iPad  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none  &bt BT_CLR
-&studio_unlock  &none        &none         &none         &none         &none           &none         &none         &none         &none  &none  &none
+&studio_unlock  &none        &none         &none         &none         &none           &none         &none         &kp G         &none  &none  &none
 &none           &none        &none         &none         &none         &none           &none         &none         &none         &none  &none  &none
 &none           &none        &none         &none         &none         &none           &none         &none         &none         &none  &none  &none
             >;
