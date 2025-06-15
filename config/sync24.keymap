@@ -59,7 +59,18 @@
             bindings = <&tog 3>;
             key-positions = <9 8 7>;
             timeout-ms = <50>;
-            layers = <4>;
+            layers = <2>;
+        };
+
+        combo_end {
+            bindings = <&kp END>;
+            key-positions = <35 47>;
+            timeout-ms = <50>;
+        };
+
+        combo_home {
+            bindings = <&kp HOME>;
+            key-positions = <35 45>;
         };
     };
 
@@ -104,10 +115,10 @@
         num {
             display-name = "Num";
             bindings = <
-&kp ESC  &kp RIGHT_BRACE  &kp BACKSLASH   &kp UP_ARROW    &kp LS(N8)           &kp LS(N9)             &kp KP_DIVIDE       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp UNDERSCORE  &kp EQUAL
-&trans   &kp LEFT_BRACE   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT            &kp EQUAL              &kp LS(APOS)        &kp N4        &kp N5        &kp N6        &kp SEMI        &kp LS(INTERNATIONAL_1)
-&trans   &kp SEMI         &kp APOS        &kp LS(SLASH)   &kp RS(RIGHT_BRACE)  &kp LS(BACKSLASH)      &kp RS(UNDERSCORE)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp UP_ARROW    &kp INTERNATIONAL_1
-&trans   &trans           &trans          &trans          &trans               &trans                 &trans              &kp N0        &kp DOT       &kp HOME      &kp DOWN_ARROW  &kp END
+&kp ESC  &kp RIGHT_BRACE  &kp BACKSLASH   &kp UP_ARROW    &kp LS(N8)           &kp LS(N9)             &kp KP_DIVIDE       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp UNDERSCORE  &kp EQUAL
+&trans   &kp LEFT_BRACE   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT            &kp EQUAL              &kp LS(APOS)        &kp N4        &kp N5        &kp N6          &kp SEMI        &kp LS(INTERNATIONAL_1)
+&trans   &kp SEMI         &kp APOS        &kp LS(SLASH)   &kp RS(RIGHT_BRACE)  &kp LS(BACKSLASH)      &kp RS(UNDERSCORE)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp UP_ARROW    &kp INTERNATIONAL_1
+&trans   &trans           &trans          &trans          &trans               &trans                 &trans              &kp N0        &kp DOT       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT
             >;
         };
 
