@@ -18,14 +18,14 @@
             timeout-ms = <50>;
             key-positions = <14 15>;
             bindings = <&kp LANG2>;
-            layers = <0 3>;
+            layers = <0 1>;
         };
 
         combo_kana {
             timeout-ms = <50>;
             key-positions = <20 21>;
             bindings = <&kp LANG1>;
-            layers = <0 3>;
+            layers = <0 1>;
         };
 
         combo_util {
@@ -37,7 +37,7 @@
         back_to_0 {
             bindings = <&to 0>;
             key-positions = <47 11>;
-            layers = <3>;
+            layers = <1>;
             timeout-ms = <50>;
         };
 
@@ -49,17 +49,17 @@
         };
 
         PC_tenkey {
-            bindings = <&tog 1>;
+            bindings = <&tog 2>;
             key-positions = <9 8 7>;
             timeout-ms = <50>;
-            layers = <0 1>;
+            layers = <0 2>;
         };
 
         iPad_tenkey {
             bindings = <&tog 4>;
             key-positions = <9 8 7>;
             timeout-ms = <50>;
-            layers = <3 4>;
+            layers = <1 4>;
         };
     };
 
@@ -74,7 +74,7 @@
         bt_01_iPad: bt_01_iPad {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &to 3>;
+            bindings = <&bt BT_SEL 1 &to 1>;
             label = "BT_01_IPAD";
         };
 
@@ -97,17 +97,27 @@
 &kp GRAVE         &kp Q         &kp W     &kp E             &kp R     &kp T            &kp Y         &kp U      &kp I                         &kp O           &kp P           &kp BACKSPACE
 &kp TAB           &kp A         &kp S     &kp D             &kp F     &kp G            &kp H         &kp J      &kp K                         &kp L           &kp UNDERSCORE  &kp RET
 &kp LSHFT         &kp Z         &kp X     &kp C             &kp V     &kp B            &kp N         &kp M      &kp COMMA                     &kp DOT         &kp UP          &kp RIGHT_SHIFT
-&kp LEFT_CONTROL  &kp LEFT_WIN  &kp LALT  &kp INT_MUHENKAN  &kp BSPC  &lt 1 SPACE      &lt 2 DELETE  &kp ENTER  &mt RIGHT_CONTROL INT_HENKAN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT
+&kp LEFT_CONTROL  &kp LEFT_WIN  &kp LALT  &kp INT_MUHENKAN  &kp BSPC  &lt 2 SPACE      &lt 3 DELETE  &kp ENTER  &mt RIGHT_CONTROL INT_HENKAN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT
+            >;
+        };
+
+        Base_iPad {
+            display-name = "Base_iPad";
+            bindings = <
+&kp LANG_ZENKAKUHANKAKU  &kp Q         &kp W     &kp E             &kp R     &kp T            &kp Y      &kp U      &kp I                         &kp O           &kp P           &kp BACKSPACE
+&kp TAB                  &kp A         &kp S     &kp NUMBER_4      &kp F     &kp G            &kp H      &kp J      &kp K                         &kp L           &kp SEMICOLON   &kp RET
+&kp LSHFT                &kp Z         &kp X     &kp C             &kp V     &kp B            &kp N      &kp M      &kp COMMA                     &kp DOT         &kp UP          &kp RSHIFT
+&kp LEFT_GUI             &kp LEFT_WIN  &kp LALT  &kp INT_MUHENKAN  &kp BSPC  &lt 2 SPACE      &lt 3 RET  &kp ENTER  &mt RIGHT_CONTROL INT_HENKAN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT
             >;
         };
 
         num {
             display-name = "Num";
             bindings = <
-&kp ESC           &kp RIGHT_BRACE  &kp BACKSLASH   &kp UP_ARROW    &kp LS(N8)           &kp LS(N9)             &kp KP_DIVIDE       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp UNDERSCORE  &kp EQUAL
-&kp LS(SLASH)     &kp LEFT_BRACE   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT            &kp EQUAL              &kp LS(APOS)        &kp N4        &kp N5        &kp N6          &kp SEMI        &kp LS(INTERNATIONAL_1)
-&kp LS(NUMBER_1)  &kp SEMI         &kp APOS        &kp LS(N7)      &kp RS(RIGHT_BRACE)  &kp LS(BACKSLASH)      &kp RS(UNDERSCORE)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp UP_ARROW    &kp INTERNATIONAL_1
-&none             &none            &none           &none           &none                &none                  &none               &kp N0        &kp DOT       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&kp ESC  &kp RIGHT_BRACE  &kp BACKSLASH   &kp UP_ARROW    &kp LS(N8)           &kp LS(N9)             &kp KP_DIVIDE       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp UNDERSCORE  &kp EQUAL
+&none    &kp LEFT_BRACE   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT            &kp EQUAL              &kp LS(APOS)        &kp N4        &kp N5        &kp N6        &kp SEMI        &kp LS(INTERNATIONAL_1)
+&none    &kp SEMI         &kp APOS        &kp LS(SLASH)   &kp RS(RIGHT_BRACE)  &kp LS(BACKSLASH)      &kp RS(UNDERSCORE)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp UP_ARROW    &kp INTERNATIONAL_1
+&none    &none            &none           &none           &none                &none                  &none               &kp N0        &kp DOT       &kp HOME      &kp DOWN_ARROW  &kp END
             >;
         };
 
@@ -118,16 +128,6 @@
 &none  &none  &none  &none  &none  &none      &none  &kp F4   &kp F5   &kp F6   &none  &none
 &none  &none  &none  &none  &none  &none      &none  &kp F7   &kp F8   &kp F9   &none  &none
 &none  &none  &none  &none  &none  &none      &none  &kp F10  &kp F11  &kp F12  &none  &none
-            >;
-        };
-
-        Base_iPad {
-            display-name = "Base_iPad";
-            bindings = <
-&kp LANG_ZENKAKUHANKAKU  &kp Q         &kp W     &kp E             &kp R     &kp T            &kp Y      &kp U      &kp I                         &kp O           &kp P           &kp BACKSPACE
-&kp TAB                  &kp A         &kp S     &kp NUMBER_4      &kp F     &kp G            &kp H      &kp J      &kp K                         &kp L           &kp SEMICOLON   &kp RET
-&kp LSHFT                &kp Z         &kp X     &kp C             &kp V     &kp B            &kp N      &kp M      &kp COMMA                     &kp DOT         &kp UP          &kp RSHIFT
-&kp LEFT_CONTROL         &kp LEFT_WIN  &kp LALT  &kp INT_MUHENKAN  &kp BSPC  &lt 1 SPACE      &lt 2 RET  &kp ENTER  &mt RIGHT_CONTROL INT_HENKAN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT
             >;
         };
 
