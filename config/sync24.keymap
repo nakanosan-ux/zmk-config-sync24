@@ -18,14 +18,14 @@
             timeout-ms = <50>;
             key-positions = <14 15>;
             bindings = <&kp LANG2>;
-            layers = <0 4>;
+            layers = <0 2>;
         };
 
         combo_kana {
             timeout-ms = <50>;
             key-positions = <20 21>;
             bindings = <&kp LANG1>;
-            layers = <0 4>;
+            layers = <0 2>;
         };
 
         combo_util {
@@ -37,7 +37,6 @@
         back_to_0 {
             bindings = <&to 0>;
             key-positions = <47 11>;
-            layers = <4>;
             timeout-ms = <50>;
         };
 
@@ -71,6 +70,7 @@
         combo_home {
             bindings = <&kp HOME>;
             key-positions = <35 45>;
+            timeout-ms = <50>;
         };
     };
 
