@@ -14,63 +14,10 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_us {
-            timeout-ms = <50>;
-            key-positions = <14 15>;
-            bindings = <&kp LANG2>;
-            layers = <0 2>;
-        };
-
-        combo_kana {
-            timeout-ms = <50>;
-            key-positions = <20 21>;
-            bindings = <&kp LANG1>;
-            layers = <0 2>;
-        };
-
         combo_util {
             timeout-ms = <50>;
             key-positions = <36 37>;
             bindings = <&mo 5>;
-        };
-
-        back_to_0 {
-            bindings = <&to 0>;
-            key-positions = <47 11>;
-            timeout-ms = <50>;
-        };
-
-        math {
-            bindings = <&word_math>;
-            key-positions = <21 19>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        PC_tenkey {
-            bindings = <&tog 1>;
-            key-positions = <9 8 7>;
-            timeout-ms = <50>;
-            layers = <0 1>;
-        };
-
-        iPad_tenkey {
-            bindings = <&tog 3>;
-            key-positions = <9 8 7>;
-            timeout-ms = <50>;
-            layers = <2>;
-        };
-
-        combo_end {
-            bindings = <&kp END>;
-            key-positions = <35 47>;
-            timeout-ms = <50>;
-        };
-
-        combo_home {
-            bindings = <&kp HOME>;
-            key-positions = <35 45>;
-            timeout-ms = <50>;
         };
 
         esca {
